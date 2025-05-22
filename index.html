@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructuras de Control JavaScript</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Estructuras de Control JavaScript</h1>
+    </div>
+
+    <div class="exercises-grid">
+      <!-- Ejercicio 1 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 1: Verificación de Mayoría de Edad</h3>
+        <div class="input-group">
+          <label for="edad">Ingrese su edad:</label>
+          <input type="number" id="edad" min="0" max="150">
+        </div>
+        <button class="btn" onclick="verificarEdad()">Verificar</button>
+        <div id="result1" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 2 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 2: Cálculo de Nota Final</h3>
+        <div class="input-group">
+          <label for="nombre">Nombre del alumno:</label>
+          <input type="text" id="nombre">
+        </div>
+        <div class="input-group">
+          <label for="carnet">Carnet:</label>
+          <input type="text" id="carnet">
+        </div>
+        <div class="input-group">
+          <label for="examen">Nota del examen (0-10):</label>
+          <input type="number" id="examen" min="0" max="10" step="0.1">
+        </div>
+        <div class="input-group">
+          <label for="tareas">Nota de tareas (0-10):</label>
+          <input type="number" id="tareas" min="0" max="10" step="0.1">
+        </div>
+        <div class="input-group">
+          <label for="asistencia">Nota de asistencia (0-10):</label>
+          <input type="number" id="asistencia" min="0" max="10" step="0.1">
+        </div>
+        <div class="input-group">
+          <label for="investigacion">Nota de investigación (0-10):</label>
+          <input type="number" id="investigacion" min="0" max="10" step="0.1">
+        </div>
+        <button class="btn" onclick="calcularNotaFinal()">Calcular Nota Final</button>
+        <div id="result2" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 3 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 3: Cálculo de Aumento Salarial</h3>
+        <div class="input-group">
+          <label for="nombreEmpleado">Nombre del empleado:</label>
+          <input type="text" id="nombreEmpleado">
+        </div>
+        <div class="input-group">
+          <label for="salario">Salario actual:</label>
+          <input type="number" id="salario" min="0" step="0.01">
+        </div>
+        <div class="input-group">
+          <label for="categoria">Categoría:</label>
+          <select id="categoria">
+            <option value="">Seleccione una categoría</option>
+            <option value="A">A - 15%</option>
+            <option value="B">B - 30%</option>
+            <option value="C">C - 10%</option>
+            <option value="D">D - 20%</option>
+          </select>
+        </div>
+        <button class="btn" onclick="calcularAumento()">Calcular Aumento</button>
+        <div id="result3" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 4 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 4: Número Mayor</h3>
+        <div class="input-group">
+          <label for="num1">Primer número:</label>
+          <input type="number" id="num1">
+        </div>
+        <div class="input-group">
+          <label for="num2">Segundo número:</label>
+          <input type="number" id="num2">
+        </div>
+        <button class="btn" onclick="encontrarMayor()">Encontrar Mayor</button>
+        <div id="result4" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 5 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 5: Descuentos en Tienda de Coches</h3>
+        <div class="input-group">
+          <label for="coche">Selecciona el coche:</label>
+          <select id="coche">
+            <option value="">Seleccione un coche</option>
+            <option value="FORD FIESTA">FORD FIESTA</option>
+            <option value="FORD FOCUS">FORD FOCUS</option>
+            <option value="FORD ESCAPE">FORD ESCAPE</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="precio">Precio del coche:</label>
+          <input type="number" id="precio" min="0" step="0.01">
+        </div>
+        <button class="btn" onclick="calcularDescuentoCoche()">Calcular Descuento</button>
+        <div id="result5" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 6 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 6: Descuentos en Viajes Turísticos</h3>
+        <div class="input-group">
+          <label for="origen">Ciudad de origen:</label>
+          <input type="text" id="origen" placeholder="Ej: Palma">
+        </div>
+        <div class="input-group">
+          <label for="destino">Destino:</label>
+          <select id="destino">
+            <option value="">Seleccione un destino</option>
+            <option value="La costa del Sol">La costa del Sol</option>
+            <option value="Panchimalco">Panchimalco</option>
+            <option value="Puerto el Triunfo">Puerto el Triunfo</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="precioViaje">Precio del viaje:</label>
+          <input type="number" id="precioViaje" min="0" step="0.01">
+        </div>
+        <button class="btn" onclick="calcularDescuentoViaje()">Calcular Descuento</button>
+        <div id="result6" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 7 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 7: Análisis de 10 Números</h3>
+        <div class="input-group">
+          <label>Ingrese 10 números enteros (separados por comas):</label>
+          <input type="text" id="numeros" placeholder="Ej: 1, -2, 15, 4, -3, 30, 7, -8, 45, 12">
+        </div>
+        <button class="btn" onclick="analizarNumeros()">Analizar Números</button>
+        <div id="result7" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 8 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 8: Tabla de Multiplicar</h3>
+        <div class="input-group">
+          <label for="numeroTabla">Número para la tabla:</label>
+          <input type="number" id="numeroTabla" min="1" max="20">
+        </div>
+        <button class="btn" onclick="generarTablaMultiplicar()">Generar Tabla</button>
+        <div id="result8" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 9 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 9: Conversión de Temperatura</h3>
+        <div class="input-group">
+          <label for="celsius">Temperatura en Celsius:</label>
+          <input type="number" id="celsius" step="0.1">
+        </div>
+        <button class="btn" onclick="convertirTemperatura()">Convertir y Evaluar</button>
+        <div id="result9" class="result"></div>
+      </div>
+
+      <!-- Ejercicio 10 -->
+      <div class="exercise-card">
+        <h3 class="exercise-title">Ejercicio 10: Promedio de Edades por Turno</h3>
+        <div class="input-group">
+          <label>Edades turno mañana (5 estudiantes, separadas por comas):</label>
+          <input type="text" id="edadesMañana" placeholder="Ej: 18, 19, 20, 17, 21">
+        </div>
+        <div class="input-group">
+          <label>Edades turno tarde (6 estudiantes, separadas por comas):</label>
+          <input type="text" id="edadesTarde" placeholder="Ej: 22, 23, 19, 20, 18, 24">
+        </div>
+        <div class="input-group">
+          <label>Edades turno noche (11 estudiantes, separadas por comas):</label>
+          <input type="text" id="edadesNoche" placeholder="Ej: 25, 26, 27, 28, 24, 23, 29, 30, 22, 21, 26">
+        </div>
+        <button class="btn" onclick="calcularPromediosEdades()">Calcular Promedios</button>
+        <div id="result10" class="result"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Developed by <a href="https://github.com/Jimieee">Jimieee</a></p>
+    </div>
+  </div>
+
+  <script src="js/exercises.js"></script>
+</body>
+
+</html>
