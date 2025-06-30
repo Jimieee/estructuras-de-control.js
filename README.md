@@ -1,1 +1,2 @@
-control structures for learning purposes only
+# 📚 JavaScript Control Structures — Cheat Sheet  
+> *For learning purposes only.*
